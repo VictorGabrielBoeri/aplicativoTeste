@@ -43,6 +43,31 @@ npm install
 yarn install
 ```
 
+### Configuração do Android SDK
+
+**Importante:** Se você encontrar o erro "SDK location not found", siga estes passos:
+
+1. **Instalar Android Studio** (se ainda não tiver):
+   - Baixe em: https://developer.android.com/studio
+   - Instale e abra o Android Studio
+   - Vá em **Tools > SDK Manager** e instale o Android SDK
+
+2. **Criar arquivo `local.properties`**:
+   ```bash
+   # Navegue para a pasta android
+   cd android
+   
+   # Crie o arquivo local.properties
+   echo sdk.dir=C:\\Users\\SEU_USUARIO\\AppData\\Local\\Android\\Sdk > local.properties
+   ```
+
+3. **Ou crie manualmente** o arquivo `android/local.properties`:
+   ```properties
+   sdk.dir=C:\\Users\\SEU_USUARIO\\AppData\\Local\\Android\\Sdk
+   ```
+   
+   > **Substitua `SEU_USUARIO` pelo seu nome de usuário do Windows**
+
 ### Rodando no Android
 
 ```sh
@@ -79,6 +104,10 @@ Os testes estão localizados na pasta `__tests__` e cobrem serviços, telas e in
 ## 👨‍💻 Contribuição
 
 Sinta-se à vontade para abrir issues ou pull requests!
+
+## 📞 Suporte
+
+Dúvidas? Entre em contato pelo e-mail: **seuemail@dominio.com**
 
 ---
 
