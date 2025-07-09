@@ -15,11 +15,9 @@ const HomeScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
   const userData = route.params?.userData || { name: 'Usuário' };
-  
+
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="#006633" barStyle="light-content" />
-      
       <View style={styles.welcomeSection}>
         <Text style={styles.welcomeText}>Olá, {userData.name}</Text>
         <View style={styles.idContainer}>
@@ -27,19 +25,21 @@ const HomeScreen = () => {
           <Text style={styles.idText}>A5874125</Text>
         </View>
       </View>
-      
+
       <View style={styles.bannerContainer}>
-        <Image 
-          source={require('../assets/imagem-inicio.png')} 
-          style={styles.banner} 
+        <Image
+          source={require('../assets/imagem-inicio.png')}
+          style={styles.banner}
           resizeMode="cover"
         />
       </View>
-      
+
+      <View style={styles.spacer} />
+
       <View style={styles.menuContainer}>
         <View style={styles.menuRow}>
-          <TouchableOpacity 
-            style={styles.menuCard} 
+          <TouchableOpacity
+            style={styles.menuCard}
             onPress={() => navigation.navigate('Cadastros')}
           >
             <View style={styles.iconContainer}>
@@ -47,7 +47,7 @@ const HomeScreen = () => {
             </View>
             <Text style={styles.menuText}>Cadastros</Text>
           </TouchableOpacity>
-          
+
           <TouchableOpacity style={styles.menuCard}>
             <View style={styles.iconContainer}>
               <Icon name="business" size={24} color="white" />
@@ -56,7 +56,7 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </View>
       </View>
-      
+
       <View style={styles.tabBar}>
         <TouchableOpacity style={styles.tabItem}>
           <Icon name="call" size={24} color="#999" />
@@ -118,10 +118,16 @@ const styles = StyleSheet.create({
   },
   menuContainer: {
     padding: 20,
+    paddingBottom: 90,
+    alignItems: 'center',
+    marginTop: 'auto',
+    marginBottom: 80,
   },
   menuRow: {
     flexDirection: 'column',
     justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
   },
   menuCard: {
     backgroundColor: 'white',
@@ -134,6 +140,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
+    width: '80%',
   },
   iconContainer: {
     width: 40,
@@ -155,7 +162,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height: 50,
+    height: 70,
     backgroundColor: 'white',
     borderTopWidth: 1,
     borderTopColor: '#ddd',

@@ -102,7 +102,6 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="#006633" barStyle="light-content" />
       <View style={styles.loginCard}>
         <Text style={styles.title}>Seja bem vindo!</Text>
 
@@ -232,6 +231,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f5f5f5',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loginCard: {
+    backgroundColor: 'white',
+    width: '85%',
+    borderRadius: 10,
+    padding: 25,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 3,
   },
   header: {
     backgroundColor: '#006633',
@@ -243,24 +256,11 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
   },
-  loginCard: {
-    backgroundColor: 'white',
-    margin: 20,
-    marginTop: 100,
-    borderRadius: 10,
-    padding: 20,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-    elevation: 3,
-  },
   title: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: 'bold',
     color: '#006633',
-    marginBottom: 20,
+    marginBottom: 25,
   },
   input: {
     width: '100%',
@@ -268,8 +268,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ddd',
     borderRadius: 5,
-    marginBottom: 15,
-    paddingHorizontal: 10,
+    marginBottom: 20,
+    paddingHorizontal: 15,
   },
   inputError: {
     borderColor: 'red',
@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     color: '#666',
     fontSize: 12,
-    marginBottom: 20,
+    marginBottom: 25,
   },
   loginButton: {
     width: '100%',
@@ -293,7 +293,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 10,
+    marginBottom: 15,
   },
   loginButtonText: {
     color: 'white',
