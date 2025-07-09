@@ -9,6 +9,12 @@ import App from '../App';
 jest.mock('@react-navigation/native', () => {
   return {
     NavigationContainer: ({ children }: { children: React.ReactNode }) => children,
+    useNavigationContainerRef: () => ({
+      getCurrentRoute: () => ({ name: 'Login' }),
+      navigate: jest.fn(),
+      goBack: jest.fn(),
+      reset: jest.fn(),
+    }),
   };
 });
 
