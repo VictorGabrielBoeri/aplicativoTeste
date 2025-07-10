@@ -105,10 +105,4 @@ Os testes estão localizados na pasta `__tests__` e cobrem serviços, telas e in
 
 Sinta-se à vontade para abrir issues ou pull requests!
 
-## 📞 Suporte
-
-Dúvidas? Entre em contato pelo e-mail: **seuemail@dominio.com**
-
----
-
 > Projeto desenvolvido para fins de avaliação técnica.
